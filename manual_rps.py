@@ -13,27 +13,27 @@ def get_user_choice():
 
 
 def get_winner(computer_choice, user_choice):
-    comp = computer_choice.lower()
-    user = user_choice.lower()
-    if comp == 'rock':
+    comp = computer_choice.title()
+    user = user_choice.title()
+    if comp == 'Rock':
         if user == 'paper':
-            print('Paper beats rock, user wins')
+            print('You won!')
         elif user == 'scissors':
-            print('Rock beats scissors, computer wins')
+            print('You lost')
         else:
             print('It is a tie!')
-    elif comp == 'paper':
+    elif comp == 'Paper':
         if user == 'rock':
-            print('Paper beats rock, computer wins')
+            print('You lost')
         elif user == 'scissors':
-            print('Scissors beats paper, user wins')
+            print('You won!')
         else:
             print('It is a tie!')
-    elif comp == 'scissors':
+    elif comp == 'Scissors':
         if user == 'rock':
-            print('Rock beats scissors, user wins')
+            print('You won!')
         elif user == 'paper':
-            print('Scissors beats paper, computer wins')
+            print('You lost')
         else:
             print('It is a tie!')
 
