@@ -21,21 +21,21 @@ def get_winner(computer_choice, user_choice):
         elif user == 'scissors':
             print('Rock beats scissors, computer wins')
         else:
-            print('It\'s a tie!')
+            print('It is a tie!')
     elif comp == 'paper':
         if user == 'rock':
             print('Paper beats rock, computer wins')
         elif user == 'scissors':
             print('Scissors beats paper, user wins')
         else:
-            print('It\'s a tie!')
+            print('It is a tie!')
     elif comp == 'scissors':
         if user == 'rock':
             print('Rock beats scissors, user wins')
         elif user == 'paper':
             print('Scissors beats paper, computer wins')
         else:
-            print('It\'s a tie!')
+            print('It is a tie!')
 
 
 get_winner(get_computer_choice(), get_user_choice())
