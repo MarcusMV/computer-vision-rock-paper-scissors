@@ -14,4 +14,13 @@
 * play() function encapsulates logic (get_computer_choice, get_user_choice, get_winner) and simulates game
 
 ## Milestone 5
-* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+* Game repeats until either computer or user wins three rounds in best of 5.
+* On-screen text will show computer choice, user choice, countdown until user choice is predicted and winner.
+* Made code much more readable by creating a class instead of creating multiple functions.
+* Created RockPaperScissors class containing methods get_computer_choice, get_user_choice, get_winner and play_game
+* Investigation into time drifting should be considered in future and details between blocking and non-blocking methods (time, datetime, threading, sched modules) -- i.e can't use the sleep function because it will stop the script, and during that time, the camera will not be able to capture the input.
+
+## Screenshots of game
+
+![Start Game](assets\start_game.png?raw=true "Start Game Img")
+![End Game](assets\end_game.jpg?raw=true "End Game Img")
