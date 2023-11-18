@@ -22,5 +22,5 @@
 
 ## Screenshots of game
 
-![Start Game](assets\start_game.png?raw=true "Start Game Img")
-![End Game](assets\end_game.jpg?raw=true "End Game Img")
+![Start Game](assets/start_game.png?raw=true "Start Game Img")
+![End Game](assets/end_game.jpg?raw=true "End Game Img")
