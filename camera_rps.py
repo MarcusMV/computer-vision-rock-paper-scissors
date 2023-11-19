@@ -15,9 +15,9 @@ class RockPaperScissors:
     - maximum_time: The maximum time allowed for each round.
 
     Methods:
-    - get_computer_choice: Returns a random choice for the computer.
-    - get_user_choice: Returns the user's choice based on the prediction.
-    - get_winner: Determines the winner of the game based on the choices.
+    - _get_computer_choice: Returns a random choice for the computer.
+    - _get_user_choice: Returns the user's choice based on the prediction.
+    - _get_winner: Determines the winner of the game based on the choices.
     - play_game: Starts the game and handles the game logic.
     """
         
@@ -25,13 +25,13 @@ class RockPaperScissors:
                                'rock', 'paper', 'scissors', 'none'])
     maximum_time: int = 5
 
-    def get_computer_choice(self):
+    def _get_computer_choice(self):
         """
         Returns a random choice for the computer.
         """
         return random.choice(self.options[:-1])
     
-    def get_user_choice(self, prediction):
+    def _get_user_choice(self, prediction):
         """
         Returns the user's choice based on the prediction.
 
@@ -100,8 +100,8 @@ class RockPaperScissors:
                 pred_arr = prediction[0]
                 max_index = np.where(pred_arr == np.max(pred_arr))
 
-                user_choice = self.get_user_choice(max_index[0][0])
-                computer_choice = self.get_computer_choice()
+                user_choice = self._get_user_choice(max_index[0][0])
+                computer_choice = self._get_computer_choice()
                 
                 if user_choice != 'none':
                     winner = self._get_winner(user_choice, computer_choice)

@@ -1,26 +1,49 @@
-# Computer Vision RPS
-## Milestone 1 & 2
-* Create an image project model from Teachable-Machine with four different classes: Rock, Paper, Scissors, Nothing. Each class is trained with images of yourself showing each option to the camera. The "Nothing" class represents the lack of option in the image. The more images trained with, the more accurate the model.
-* Download the model from Tensorflow tab in Teachable-Machine: keras_model.h5, labels.txt. The files contain the structure and the parameters of a deep learning model.
+# Computer Vision Rock-Paper-Scissors
 
-## Milestone 3
-* Created conda virtual environment and installed dependencies opencv-python, tensorflow and ipykernel.
-* Checked the model worked as expected by running the RPS-Template.py file
+## Overview
+This project is a Rock-Paper-Scissors game that utilizes computer vision and machine learning to predict the player's hand gestures through a webcam. It allows the player to engage in the classic game of Rock-Paper-Scissors against the computer. The predictions are made using a Keras model trained on images of different hand gestures corresponding to rock, paper, and scissors.
 
-## Milestone 4
-* Stored the user's and computer's choices, input function to get user's choice and import random module to select random choice for computer
-* Logic completed to get winner given user and computer choices
-* Prints output to screen displaying if user won or lost against computer
-* play() function encapsulates logic (get_computer_choice, get_user_choice, get_winner) and simulates game
+### Screenshots of game
 
-## Milestone 5
-* Game repeats until either computer or user wins three rounds in best of 5.
-* On-screen text will show computer choice, user choice, countdown until user choice is predicted and winner.
-* Made code much more readable by creating a class instead of creating multiple functions.
-* Created RockPaperScissors class containing methods get_computer_choice, get_user_choice, get_winner and play_game
-* Investigation into time drifting should be considered in future and details between blocking and non-blocking methods (time, datetime, threading, sched modules) -- i.e can't use the sleep function because it will stop the script, and during that time, the camera will not be able to capture the input.
+<p align="center">
+  <img alt="start_game" src="assets/start_game.png?raw=true" width="47%">
+&nbsp;
+  <img alt="end_game" src="assets/end_game.jpg?raw=true" width="47.5%">
+</p>
 
-## Screenshots of game
+## Features
+- Real-time hand gesture recognition
+- Live countdown for each round
+- Score tracking and display
+- Best of five gameplay
+- User-friendly interface with live feedback
 
-![Start Game](assets/start_game.png?raw=true "Start Game Img")
-![End Game](assets/end_game.jpg?raw=true "End Game Img")
+## Setup
+1. Clone the repository to your local machine.
+2. Install the required dependencies by running:
+
+    ```
+    pip install -r requirements.txt
+    ```
+3. Run the script to start the game:
+
+    ```
+    python camera_rps.py
+    ```
+
+## Usage
+- Sit in front of your webcam in a well-lit area, ideally with a plain background.
+- Start the game script, you will see a countdown timer on the screen.
+- Make your gesture (rock, paper, or scissors) in front of the webcam within the given time like the images below.
+- The computer's choice will be randomly selected, and the winner of the round will be displayed on the screen.
+- The first to win three rounds wins the game.
+- The live model prediction can be seen in the terminal.
+- To quit the game, press 'Q' or 'q'.
+
+## Model Training
+The machine learning model is a convolutional neural network trained on a dataset of hand gesture images generated via [Teachable-Machine](https://teachablemachine.withgoogle.com/). The model is named `keras_model.h5` in this repository which relies on `labels.txt`.
+
+If you wish to train your own model for this project, you would need to collect images of the hand gestures, label them accordingly, and train the model using Keras and TensorFlow on [Teachable-Machine](https://teachablemachine.withgoogle.com/).
+
+## Dependencies
+Please refer to `requirements.txt` for a list of dependencies.
