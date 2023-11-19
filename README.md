@@ -30,6 +30,11 @@ This project is a Rock-Paper-Scissors game that utilizes computer vision and mac
     ```
     python camera_rps.py
     ```
+4. The input based terminal version of the game can also be run with:
+
+    ```
+    python manual_rps.py
+    ```
 
 ## Usage
 - Sit in front of your webcam in a well-lit area, ideally with a plain background.
